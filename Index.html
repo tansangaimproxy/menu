@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF MOD MENU V1.0 - VIP EXCLUSIVE</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #00ff41;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .menu-container {
+            width: 300px;
+            background: rgba(20, 20, 20, 0.9);
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ff0000;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 1px solid #ff0000;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+            color: #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 5px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .option:hover {
+            background: rgba(255, 0, 0, 0.1);
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Nút Switch giả */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #333;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #ff0000;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn-inject {
+            background: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        .btn-inject:active {
+            transform: scale(0.95);
+        }
+
+        #status {
+            font-size: 12px;
+            margin-top: 10px;
+            color: #aaa;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-container">
+    <div class="header">
+        <h1>QtuyenFile Menu V1</h1>
+        <small>Status: <span style="color: #00ff41;">online</span></small>
+    </div>
+
+    <div class="option">
+        <span class="label">Aimbot</span>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="option">
+        <span class="label">Headshot</span>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="option">
+        <span class="label">Aimlock</span>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="option">
+        <span class="label">fov 20%</span>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="option">
+        <span class="label">antiban</span>
+        <label class="switch">
+            <input type="checkbox" id="diamond-hack">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="footer">
+        <button class="btn-inject" onclick="startTroll()">Inject MOD (Active)</button>
+        <div id="status">Ready to Bypass...</div>
+    </div>
+</div>
+
+<script>
+    function startTroll() {
+        const status = document.getElementById('status');
+        status.innerHTML = "Injecting...";
+        status.style.color = "#ffff00";
+        
+        setTimeout(() => {
+            status.innerHTML = "Bypassing Security...";
+        }, 1500);
+
+        setTimeout(() => {
+            status.innerHTML = " successfully!";
+            status.style.color = "#00ff41";
+            alert("Thành Công!");
+        }, 3500);
+    }
+</script>
+
+</body>
+</html>
