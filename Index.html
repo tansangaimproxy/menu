@@ -3,125 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP System Check</title>
+    <title>SEVER PROXY VIP</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
         body {
-            margin: 0; padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: radial-gradient(circle at center, #1b1b2f 0%, #0f0f1a 100%);
-            height: 100vh; display: flex;
-            justify-content: center; align-items: center; color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
         }
 
         .container {
-            width: 350px; padding: 40px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            width: 350px;
             text-align: center;
         }
 
-        h2 {
-            margin-bottom: 25px;
-            background: linear-gradient(90deg, #00f2fe, #4facfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 600;
-        }
+        h2 { margin-bottom: 25px; color: #00d4ff; text-transform: uppercase; letter-spacing: 2px; }
 
         input, select {
-            width: 100%; padding: 12px; margin: 8px 0;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px; color: #fff;
-            outline: none; box-sizing: border-box; transition: 0.3s;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
         }
 
-        input:focus { border-color: #00f2fe; box-shadow: 0 0 10px rgba(0, 242, 254, 0.3); }
+        input:focus { border-color: #00d4ff; background: rgba(255, 255, 255, 0.1); }
 
         button {
-            width: 100%; padding: 14px; margin-top: 20px;
-            border: none; border-radius: 10px;
-            background: linear-gradient(45deg, #00f2fe, #4facfe);
-            color: #000; font-weight: bold; cursor: pointer;
-            text-transform: uppercase; transition: 0.3s;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #00d4ff, #090979);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
         }
 
-        button:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(0, 242, 254, 0.5); }
-
-        .modal {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px);
-            justify-content: center; align-items: center; z-index: 999;
-        }
-
-        .modal-content {
-            background: #1e1e2f; padding: 30px; border-radius: 20px;
-            border: 2px solid #ff4d4d; text-align: center;
-            width: 80%; max-width: 300px; animation: popUp 0.3s ease-out;
-        }
-
-        @keyframes popUp { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
-        .close-btn {
-            margin-top: 20px; background: #ff4d4d; color: white;
-            padding: 10px 20px; border-radius: 5px; cursor: pointer;
-        }
+        button:hover { transform: scale(1.05); filter: brightness(1.2); }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>PROXY SEVER CHECK</h2>
-    <input type="text" placeholder="Server:">
-    <input type="text" placeholder="Port:">
-    <select>
-        <option>20.000</option>
-        <option>50.000</option>
-        <option>100.000</option>
-    </select>
-    <input type="text" placeholder="Seri thẻ:">
-    <input type="text" placeholder="Mã thẻ:">
-    <button onclick="checkLogic()">CHECK</button>
-</div>
-
-<div id="popupModal" class="modal">
-    <div class="modal-content">
-        <h3 id="modalTitle" style="color: #ff4d4d;">CẢNH BÁO</h3>
-        <p id="modalMessage">Nội dung sẽ thay đổi</p>
-        <div class="close-btn" onclick="closePopup()">Đóng</div>
-    </div>
+    <h2>SEVER PROXY VIP</h2>
+    <form id="proxyForm">
+        <input type="text" placeholder="Server (vd: proxyvip.3Dunitykeyba1.com)" required>
+        <input type="number" placeholder="Port (vd: 443)" required>
+        
+        <select>
+            <option value="50000">Mệnh giá: 50.000 VNĐ</option>
+        </select>
+        
+        <input type="text" placeholder="Seri thẻ" required>
+        <input type="text" placeholder="Mã thẻ" required>
+        <input type="text" placeholder="Code sever" required>
+        
+        <button type="submit">Xác nhận</button>
+    </form>
 </div>
 
 <script>
-    let clickCount = 0; // Biến đếm số lần nhấn
-
-    function checkLogic() {
-        clickCount++; // Tăng biến đếm sau mỗi lần nhấn
-        const modal = document.getElementById('popupModal');
-        const title = document.getElementById('modalTitle');
-        const message = document.getElementById('modalMessage');
-
-        if (clickCount === 1) {
-            // Lần nhấn đầu tiên
-            title.innerText = "KẾT QUẢ";
-            message.innerHTML = "Server và cổng đã bị khoá!<br>Vui lòng thử lại.";
-        } else {
-            // Lần nhấn thứ 2, 3, 4...
-            title.innerText = "THÔNG BÁO";
-            message.innerText = "Mã thẻ đã được sử dụng";
-        }
-        
-        modal.style.display = 'flex';
-    }
-    
-    function closePopup() {
-        document.getElementById('popupModal').style.display = 'none';
-    }
+    document.getElementById('proxyForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Thông báo đã được cập nhật
+        alert("Lỗi 403: Ứng dụng đã bị khoá, vì vấn đề pháp lý của các ứng dụng khác, vui lòng thử lại sau!");
+    });
 </script>
 
 </body>
