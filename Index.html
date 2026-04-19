@@ -40,10 +40,7 @@
             color: white;
             box-sizing: border-box;
             outline: none;
-            transition: 0.3s;
         }
-
-        input:focus { border-color: #00d4ff; background: rgba(255, 255, 255, 0.1); }
 
         button {
             width: 100%;
@@ -56,7 +53,6 @@
             font-weight: bold;
             cursor: pointer;
             text-transform: uppercase;
-            transition: 0.3s;
         }
 
         button:hover { transform: scale(1.05); filter: brightness(1.2); }
@@ -66,28 +62,27 @@
 
 <div class="container">
     <h2>SEVER PROXY VIP</h2>
-    <form id="proxyForm">
-        <input type="text" placeholder="Server (vd: proxyvip.3Dunitykeyba1.com)" required>
-        <input type="number" placeholder="Port (vd: 443)" required>
+    <div>
+        <input type="text" id="server" placeholder="Server (vd: proxyvip.3Dunitykeyba1.com)">
+        <input type="number" id="port" placeholder="Port (vd: 443)">
         
         <select>
-            <option value="50000">Mệnh giá: 50.000 VNĐ</option>
+            <option>Mệnh giá: 50.000 VNĐ</option>
         </select>
         
-        <input type="text" placeholder="Seri thẻ" required>
-        <input type="text" placeholder="Mã thẻ" required>
-        <input type="text" placeholder="Code sever" required>
+        <input type="text" placeholder="Seri thẻ">
+        <input type="text" placeholder="Mã thẻ">
+        <input type="text" placeholder="Code sever">
         
-        <button type="submit">Xác nhận</button>
-    </form>
+        <button onclick="hienThongBao()">Xác nhận</button>
+    </div>
 </div>
 
 <script>
-    document.getElementById('proxyForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Thông báo đã được cập nhật
-        alert("Lỗi 403: Ứng dụng đã bị khoá, vì vấn đề pháp lý của các ứng dụng khác, vui lòng thử lại sau!");
-    });
+    function hienThongBao() {
+        alert("Lỗi 403:Xin lỗi ứng dụng đã bị khoá,vì vấn đề pháp lý của ứng dụng khác,vui lòng thử lại sau
+            ");
+    }
 </script>
 
 </body>
