@@ -62,26 +62,24 @@
 
 <div class="container">
     <h2>SEVER PROXY VIP</h2>
-    <div>
-        <input type="text" id="server" placeholder="Server (vd: proxyvip.3Dunitykeyba1.com)">
-        <input type="number" id="port" placeholder="Port (vd: 443)">
-        
-        <select>
-            <option>Mệnh giá: 50.000 VNĐ</option>
-        </select>
-        
-        <input type="text" placeholder="Seri thẻ">
-        <input type="text" placeholder="Mã thẻ">
-        <input type="text" placeholder="Code sever">
-        
-        <button onclick="hienThongBao()">Xác nhận</button>
-    </div>
+    
+    <input type="text" placeholder="Server (vd: proxyvip.3Dunitykeyba1.com)">
+    <input type="number" placeholder="Port (vd: 443)">
+    
+    <select>
+        <option>Mệnh giá: 50.000 VNĐ</option>
+    </select>
+    
+    <input type="text" placeholder="Seri thẻ">
+    <input type="text" placeholder="Mã thẻ">
+    <input type="text" placeholder="Code sever">
+    
+    <button onclick="showError()">Xác nhận</button>
 </div>
 
 <script>
-    function hienThongBao() {
-        alert("Lỗi 403:Xin lỗi ứng dụng đã bị khoá,vì vấn đề pháp lý của ứng dụng khác,vui lòng thử lại sau
-            ");
+    function showError() {
+        alert("Lỗi 403: Ứng dụng đã bị khóa, vui lòng thử lại sau!");
     }
 </script>
 
